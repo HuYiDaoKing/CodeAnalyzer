@@ -1,0 +1,23 @@
+﻿<!--业务库引用-->
+<script src="../../Scripts/ExtJs/AdminUser/CAdminUserView.js" type="text/javascript"></script>
+<script src="../../Scripts/ExtJs/AdminUser/CAdminUser.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    //全局变量
+    var strDomainId = '';
+    Ext.onReady(function () {
+
+        //初始化Extjs
+        Ext.QuickTips.init();
+        Ext.BLANK_IMAGE_URL = '/Scripts/ExtJs/ext-3.4.0/resources/images/gray/s.gif';
+
+        /**
+        * 布局
+        */
+        strDomainId = $('#UserId').val();
+        AdminUserView.GetViewPort(strDomainId);
+    })
+
+</script>
+
+<input id="UserId" value="@ViewData["UserId"]" style="visibility:hidden" />

@@ -1,0 +1,152 @@
+﻿body
+{
+    font-size: small;
+    font-family: 宋体;
+}
+
+.href_style
+{
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+.icon-add
+{
+    background-image: url(../../images/user/add.png);
+}
+
+.icon-edit
+{
+    background-image: url(../../images/user/application_edit.png);
+}
+
+.icon-refresh
+{
+    background-image: url(../../images/user/arrow_refresh_small.png);
+}
+
+.icon-delete
+{
+    background-image: url(../../images/user/cross.png);
+}
+
+.icon-submit
+{
+    background-image: url(../../images/user/tick.png);
+}
+
+.icon-link
+{
+    background-image: url(../../images/user/link_go.png);
+}
+
+.icon-search
+{
+    background-image: url(../../images/user/search.jpg);
+}
+
+.icon-cancel
+{
+    background-image: url(../../images/user/cancel.png);
+}
+
+.icon-upload
+{
+    background-image: url(../../images/user/upload.png);
+}
+
+.icon-export
+{
+    background-image: url(../../images/user/export.png);
+}
+
+.icon-admin
+{
+    background-image: url(../../images/user/admin.png);
+}
+
+.icon-img {
+    background-image: url(../../images/user/img.png);
+}
+
+.icon-video
+{
+    background-image: url(../../images/user/video.png);
+}
+
+.icon-audio
+{
+    background-image: url(../../images/user/audio.png);
+}
+
+.icon-info
+{
+    background-image: url(../../images/user/info.png);
+}
+
+.icon-text
+{
+    background-image: url(../../images/user/text.png);
+}
+
+.icon-logoff
+{
+    background-image: url(../../images/user/logoff.png);
+}
+
+.icon-log
+{
+    background-image: url(../../images/user/log.png);
+}
+
+.icon-filter
+{
+    background-image: url(../../images/user/filter.png);
+}
+
+.icon-tick
+{
+    background-image: url(../../images/user/tick.png);
+}
+.icon-bug
+{
+    background-image: url(../../images/user/bug_error.png);
+}
+.icon-wait
+{
+    background-image: url(../../images/user/wait.png);
+}
+.icon-questionaire
+{
+    background-image: url(../../images/user/questionaire.png);
+}
+.icon-sign-out
+{
+    background-image: url(../../images/user/sign-out.png);
+}
+.icon-scan
+{
+    background-image: url(../../images/user/scan.png);
+}
+
+
+.f-c button
+{
+    color: #fff;
+}
+
+.x-btn-text
+{
+    font-size: 15px !important;
+}
+
+/*20141009 注释*/
+.x-grid3-body .x-grid3-td-numberer, .x-grid3-body .x-grid3-row-selected .x-grid3-td-checker,.x-grid3-body .x-grid3-td-checker
+{
+    background:none !important;
+}
+
