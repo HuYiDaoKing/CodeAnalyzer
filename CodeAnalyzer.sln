@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeAnalyzer.Common.Utility
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeAnalyzer.DBUtility", "CodeAnalyzer.DBUtility\CodeAnalyzer.DBUtility.csproj", "{B8551F71-6A54-4A5D-A981-4FD0C6037872}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeAnalyzer.DAL", "CodeAnalyzer.DAL\CodeAnalyzer.DAL.csproj", "{BBDB6521-3580-4044-86E1-5ECE5AC22917}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeAnalyzer.BLL", "CodeAnalyzer.BLL\CodeAnalyzer.BLL.csproj", "{3F1F2E36-E07E-44D5-84C6-D63B73089B97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{B8551F71-6A54-4A5D-A981-4FD0C6037872}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8551F71-6A54-4A5D-A981-4FD0C6037872}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8551F71-6A54-4A5D-A981-4FD0C6037872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBDB6521-3580-4044-86E1-5ECE5AC22917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBDB6521-3580-4044-86E1-5ECE5AC22917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBDB6521-3580-4044-86E1-5ECE5AC22917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBDB6521-3580-4044-86E1-5ECE5AC22917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F1F2E36-E07E-44D5-84C6-D63B73089B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F1F2E36-E07E-44D5-84C6-D63B73089B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F1F2E36-E07E-44D5-84C6-D63B73089B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F1F2E36-E07E-44D5-84C6-D63B73089B97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

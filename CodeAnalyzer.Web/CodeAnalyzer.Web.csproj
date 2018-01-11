@@ -77,6 +77,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SysInfoManager">
+      <HintPath>Lib\SysInfoManager.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -197,8 +200,11 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminUserController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Filters\LoginFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1619,8 +1625,28 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Lib\MySql.Data.dll" />
+    <Content Include="Scripts\AdminUser\CAdminUser.js" />
+    <Content Include="Scripts\AdminUser\CAdminUserView.js" />
+    <Content Include="Scripts\AdminUser\CArRegister.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\AllStatics\CAllStatics.js" />
+    <Content Include="Scripts\AllStatics\CAllStaticsView.js" />
+    <Content Include="Scripts\ArLogin\CArLogin.js" />
+    <Content Include="Scripts\ArLogin\images\iocn.jpg" />
+    <Content Include="Scripts\ArLogin\images\loginpage_02.jpg" />
+    <Content Include="Scripts\ArLogin\images\loginpage_03.jpg" />
+    <Content Include="Scripts\ArLogin\images\loginpage_04.jpg" />
+    <Content Include="Scripts\ArLogin\images\loginpage_06.jpg" />
+    <Content Include="Scripts\ArLogin\images\loginpage_07.jpg" />
+    <Content Include="Scripts\ArLogin\images\loginpage_08.jpg" />
+    <Content Include="Scripts\ArLogin\images\loginpage_09.jpg" />
+    <Content Include="Scripts\ArLogin\images\loginpage_10.jpg" />
+    <Content Include="Scripts\ArLogin\images\loginpage_11.jpg" />
+    <Content Include="Scripts\ArLogin\images\loginpage_12.jpg" />
+    <Content Include="Scripts\ArLogin\images\loginpage_13.jpg" />
+    <Content Include="Scripts\ArLogin\images\loginpage_14.jpg" />
+    <Content Include="Scripts\ArLogin\stylelog.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -1652,7 +1678,15 @@
     <Content Include="ExtJs\ext-3.4.0\resources\images\yourtheme\window\top-bottom.psd" />
     <Content Include="ExtJs\Widget\datatimefield\images\Thumbs.db" />
     <Content Include="Config\log4net.config" />
+    <Content Include="Scripts\ArLogin\images\Thumbs.db" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\BugTask\CBugTask.js" />
+    <Content Include="Scripts\BugTask\CBugTaskView.js" />
+    <Content Include="Scripts\Default\CDefault.js" />
+    <Content Include="Scripts\Default\CDefaultView.js" />
+    <Content Include="Scripts\Default\CDefaultWest.js" />
+    <Content Include="Scripts\Field\CField.js" />
+    <Content Include="Scripts\Field\CFieldView.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -1660,9 +1694,46 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\LogServiceConfig\CLogServiceConfig.js" />
+    <Content Include="Scripts\LogServiceConfig\CLogServiceConfigView.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\NeedLoginReviewTask\CNeedLoginReviewTask.js" />
+    <Content Include="Scripts\NeedLoginReviewTask\CNeedLoginReviewTaskView.js" />
+    <Content Include="Scripts\NeedLogin\CNeedLogin.js" />
+    <Content Include="Scripts\NeedLogin\CNeedLoginView.js" />
+    <Content Include="Scripts\NeedLogin\CNeedLoginWest.js" />
+    <Content Include="Scripts\PushTask\CPushTask.js" />
+    <Content Include="Scripts\PushTask\CPushTaskView.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\ReviewTask\CReviewTask.js" />
+    <Content Include="Scripts\ReviewTask\CReviewTaskView.js" />
+    <Content Include="Scripts\Role\CRole.js" />
+    <Content Include="Scripts\Role\CRoleView.js" />
+    <Content Include="Scripts\Statics\CStatics.js" />
+    <Content Include="Scripts\Statics\CStaticsView.js" />
+    <Content Include="Scripts\Task\CTask.js" />
+    <Content Include="Scripts\Task\CTaskView.js" />
+    <Content Include="Scripts\UserReviewStatics\CUserReviewStatics.js" />
+    <Content Include="Scripts\UserReviewStatics\CUserReviewStaticsView.js" />
+    <Content Include="Scripts\Widget\CDynamicForm.js" />
+    <Content Include="Scripts\Widget\CHelper.js" />
+    <Content Include="Scripts\Widget\Const.js" />
+    <Content Include="Scripts\Widget\datatimefield\css\Spinner.css" />
+    <Content Include="Scripts\Widget\datatimefield\DateTimeField.js" />
+    <Content Include="Scripts\Widget\datatimefield\images\spinner-split.gif" />
+    <Content Include="Scripts\Widget\datatimefield\images\spinner.gif" />
+    <Content Include="Scripts\Widget\datatimefield\Spinner.js" />
+    <Content Include="Scripts\Widget\datatimefield\SpinnerField.js" />
+    <Content Include="Scripts\Widget\datatimefield\使用说明.txt" />
+    <Content Include="Scripts\Widget\DynamicGrid.js" />
+    <Content Include="Scripts\Widget\DynamicPictureView.js" />
+    <Content Include="Scripts\Widget\styleswitcher.js" />
+    <Content Include="Scripts\Widget\TCAMPTreePanel.js" />
+    <Content Include="Scripts\Widget\ToastWindow.js" />
+    <Content Include="Scripts\Widget\Upload\Ext.ux.UploadDialog.css" />
+    <Content Include="Scripts\Widget\Upload\Ext.ux.UploadDialog.js" />
+    <Content Include="Scripts\Widget\Upload\FileUploadField.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -1699,6 +1770,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\AdminUser\Index.cshtml" />
+    <Content Include="Scripts\Widget\datatimefield\images\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1873,6 +1945,8 @@
     <Folder Include="ExtJs\ext-3.4.0\src\ext-core\examples\tabs\images\" />
     <Folder Include="ExtJs\ext-3.4.0\src\ext-core\test\yui_2.6.0\yui\build\logger\assets\skins\sam\" />
     <Folder Include="ExtJs\ext-3.4.0\src\ext-core\test\yui_2.6.0\yui\build\yuitest\assets\skins\sam\" />
+    <Folder Include="Views\Base\" />
+    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -1881,6 +1955,16 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeAnalyzer.Common.Utility\CodeAnalyzer.Common.Utility.csproj">
+      <Project>{bc485e28-f317-4682-b720-f2f44e985a24}</Project>
+      <Name>CodeAnalyzer.Common.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeAnalyzer.Models\CodeAnalyzer.Models.csproj">
+      <Project>{f329719d-30cd-4f8a-983b-07c7e5bec0b8}</Project>
+      <Name>CodeAnalyzer.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

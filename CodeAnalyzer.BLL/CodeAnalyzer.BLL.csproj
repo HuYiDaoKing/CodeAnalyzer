@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BC485E28-F317-4682-B720-F2F44E985A24}</ProjectGuid>
+    <ProjectGuid>{3F1F2E36-E07E-44D5-84C6-D63B73089B97}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CodeAnalyzer.Common.Utility</RootNamespace>
-    <AssemblyName>CodeAnalyzer.Common.Utility</AssemblyName>
+    <RootNamespace>CodeAnalyzer.BLL</RootNamespace>
+    <AssemblyName>CodeAnalyzer.BLL</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,16 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceModel.Channels" />
-    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,18 +40,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileHash.cs" />
-    <Compile Include="FileHelper.cs" />
-    <Compile Include="Log4Helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SettingManager.cs" />
-    <Compile Include="WcfChannelFactory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\log4net.config" />
-    <None Include="packages.config" />
+    <ProjectReference Include="..\CodeAnalyzer.Common.Utility\CodeAnalyzer.Common.Utility.csproj">
+      <Project>{bc485e28-f317-4682-b720-f2f44e985a24}</Project>
+      <Name>CodeAnalyzer.Common.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeAnalyzer.DAL\CodeAnalyzer.DAL.csproj">
+      <Project>{bbdb6521-3580-4044-86e1-5ece5ac22917}</Project>
+      <Name>CodeAnalyzer.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeAnalyzer.DBUtility\CodeAnalyzer.DBUtility.csproj">
+      <Project>{b8551f71-6a54-4a5d-a981-4fd0c6037872}</Project>
+      <Name>CodeAnalyzer.DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeAnalyzer.Models\CodeAnalyzer.Models.csproj">
+      <Project>{f329719d-30cd-4f8a-983b-07c7e5bec0b8}</Project>
+      <Name>CodeAnalyzer.Models</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
